@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="DataSource" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MenuPortable.db</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@dm1nMPM2019</Value>
+    </Setting>
+    <Setting Name="Fonte" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 14.25pt</Value>
+    </Setting>
+    <Setting Name="TamX" Type="System.String" Scope="User">
+      <Value Profile="(Default)">560</Value>
+    </Setting>
+    <Setting Name="TamY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="PosX" Type="System.String" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="PosY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="Empresa" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MIPAMAX Soluções em Tecnologia</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
