@@ -1,7 +1,22 @@
 ﻿Imports System.Data.SQLite
+Imports System.Drawing.Drawing2D
 Imports System.Windows.Forms.VisualStyles
 
 Public Class frmPrincipal
+
+    Private Function CantoArredondado() As GraphicsPath
+        Dim p As New GraphicsPath()
+        p.StartFigure()
+        p.AddArc(New Rectangle(0, 0, 40, 40), 180, 90)
+        p.AddLine(40, 0, Me.Width - 40, 0)
+        p.AddArc(New Rectangle(Me.Width - 40, 0, 40, 40), -90, 90)
+        p.AddLine(Me.Width, 40, Me.Width, Me.Height - 40)
+        p.AddArc(New Rectangle(Me.Width - 40, Me.Height - 40, 40, 40), 0, 90)
+        p.AddLine(Me.Width - 40, Me.Height, 40, Me.Height)
+        p.AddArc(New Rectangle(0, Me.Height - 40, 40, 40), 90, 90)
+        p.CloseFigure()
+        Return p
+    End Function
 
     Private Sub CriaBotao()
         Dim bt As String
@@ -41,6 +56,7 @@ Public Class frmPrincipal
                 botao.FlatAppearance.BorderSize = 0
                 botao.Font = My.Settings.Fonte
                 botao.TabIndex = x + 1
+
                 AddHandler botao.Click, AddressOf btn_Click
                 Panel1.Controls.Add(botao)
             Next
@@ -71,6 +87,8 @@ Public Class frmPrincipal
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Region = New Region(CantoArredondado)
+
         If ExisteBancoDados() Then
             onCreate()
         End If
